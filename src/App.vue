@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import humanizeDuration from 'humanize-duration';
+
 export default {
   name: 'App',
   data() {
@@ -48,8 +50,6 @@ export default {
   },
   computed: {
     timeUntilXmas() {
-      // eslint-disable-next-line global-require
-      const humanizeDuration = require('humanize-duration');
       const currentMonth = this.now.getMonth() + 1;
       const currentDay = this.now.getDate();
       let nextChristmasYear = this.now.getFullYear();
